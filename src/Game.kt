@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     //Player status
     printPlayerStatus(auraColor, isBlessed, name, healthStatus)
 
-    castFireball(5)
+    castFireball()
 }
 
 private fun printPlayerStatus(
@@ -29,7 +29,6 @@ private fun formatHealthStatus(
     healthPoints: Int,
     isBlessed: Boolean
 ): String {
-
     return when (healthPoints) {
         100 -> "is in excellent condition!"
         in 90..99 -> "has a few scratches."
@@ -53,6 +52,7 @@ private fun auraColor(
     return if (auraVisible) "GREEN" else "NONE"
 }
 
-private fun castFireball(numFireballs: Int) {
+//example of a unit function
+private fun castFireball(numFireballs: Int = 2) {
     println("A glass of Fireball springs into existence. (x$numFireballs)")
 }
